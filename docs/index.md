@@ -43,7 +43,7 @@ sudo vim /etc/group
 ```
 and then add the username `xyz123` to the `adm` and `sudo` list.
 
-### Accessing jupyter via Jupyter hub
+### Accessing Jupyter via Jupyter-hub
 Jupyter hub is in the process of being installed
 
 ### Software Installation
