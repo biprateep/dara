@@ -3,7 +3,7 @@ Here I will try to list down all usage notes, installation notes for maintaining
 
 ### Setting up Conda
 
-Conda should already be installed for all users. You can SSH into Dara using your Pitt username and password. Be sure to either be connected to the University LAN or via the * Physics and Astronomy * VPN.  
+Conda should already be installed for all users. You can SSH into Dara using your Pitt username and password. Be sure to either be connected to the University LAN or via the **Physics and Astronomy** VPN.  
 Add the following code snippet to your local `.bashrc` file.   
 
 ```bash
