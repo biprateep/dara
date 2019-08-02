@@ -33,10 +33,18 @@ or
 ```bash
 pip install --user <package-name>
 ```
-he conda based installation should be favoured.
+The conda based installation should be favoured.
 
-### Account settings and priviledges for different accounts
-to be populated
+### Account creation, settings and priviledges for different accounts
+Accounts now use Pitt's, single sign on solution and hence need to be processed through Gracie.  
+The account priviledges can be changed by any of the admins/sudo-ers. Add the usernames to the `/etc/group` file. For ex:
+```bash
+sudo vim /etc/group
+```
+and then add the username `xyz123` to the `adm` and `sudo` list.
 
-### Accessing the jupyter via Jupyter hub
+### Accessing jupyter via Jupyter hub
 Jupyter hub is in the process of being installed
+
+### Software Installation
+Any software installed via `sudo apt-get install <software-name>` should be accessible to all users. Some exceptions might occur (like `conda`) and some additions to the `.bashrc` file might be neccessary. 
