@@ -1,8 +1,6 @@
 Welcome to the Wiki for Dara!  
 Here I will try to list down all usage notes, installation notes for maintaining Dara
 
-**NOTE**: The X-window system does not work currently and is being worked on.
-
 ### Setting up Conda for your account
 
 Conda should already be installed for all users. You can SSH into Dara using your Pitt username and password. Be sure to either be connected to the University LAN or via the **Physics and Astronomy** VPN.  
