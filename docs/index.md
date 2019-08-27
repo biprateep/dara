@@ -49,8 +49,22 @@ sudo vim /etc/group
 ```
 and then add the username `xyz123` to the `adm` and `sudo` list.
 
-### Accessing Jupyter via Jupyter-hub
-Jupyter hub is in the process of being installed
+### Accessing Jupyter via Jupyter-Hub
+Jupyter-Hub is in principle installed on Dara. It does not work as a full time service and may not be available sometimes but can always be started by the user if it is not available.    
+After passing through the Pitt VPN got to the url : https://dara.phyast.pitt.edu:8000 and log in using your Pitt user ID and password (just like you did for dara ssh login). The browser might warn you that the connection is not safe but you can click on the proceed anyway link.   
+
+**Launching a Jupyter-Hub Server** (The method will be updated in the future in favor of something more robust)   
+
+If the Jupyter-Hub server is not running you can start an instance yourself by logging into dara via ssh. First type `screen` on the terminal which should open a dummy terminal which can be run on the background. Move to the directory `/opt/jupyterHub` and then type `jupyterhub` this should start a Jupyter-Hub server if not already running. You can press `ctrl + a` and then `ctrl + d` to get out of the screened terminal and close your terminal to let the process run in the background.
+
+**IMPORTANT PRECAUTIONARY NOTE**  
+If you are using Tensorflow on Dara Please add the following lines to your code. This will prevent Tensorflow to allocate all the memory on the GPU and make the GPUs unusable for other users. You can check the memory allocation on the GPUs using the command `nvidia-smi` on the terminal as a cross check.
+
+```python
+config = tf.ConfigProto()
+config.gpu_options.allow_growth=True
+sess = tf.Session(config=config)
+```
 
 ### Software Installation
 Any software installed via `sudo apt-get install <software-name>` should be accessible to all users. Some exceptions might occur (like `conda`) and some additions to the `.bashrc` file might be neccessary. 
