@@ -41,7 +41,7 @@ All the spaces are common to all and no per account limitations are imposed.
 The current status of storage space can be found using the command `df -kh`
 Only data that requires fast read and write should be stored in the home directories. Data that requires multiple read-writes should not be stored on the SSDs to increase their lifespan.
 
-### Account creation, settings and priviledges for different accounts
+### Account creation, settings and privileges for different accounts
 Accounts now use Pitt's, single sign on solution and hence need to be processed through Gracie.  
 The account priviledges can be changed by any of the admins/sudo-ers. Add the usernames to the `/etc/group` file. For ex:
 ```bash
@@ -54,15 +54,16 @@ Jupyter-Hub is in principle installed on Dara. It does not work as a full time s
 After passing through the Pitt VPN go to the url : <https://dara.phyast.pitt.edu:8000> and log in using your Pitt user ID and password (the same as dara ssh login). The browser might warn you that the connection is not safe but you can click on the proceed anyway link provided by your browser.   
 
 **IMPORTANT PRECAUTIONARY NOTE**  
-If you are using Tensorflow on Dara Please add the following lines to your code. This will prevent Tensorflow to allocate all the memory on the GPU and make the GPUs unusable for other users. You can check the memory allocation on the GPUs using the command `nvidia-smi` on the terminal as a cross check.
+If you are using Tensorflow (or Keras with Tensorflow backend) on Dara please always add the following lines to the beginning of your code. This will prevent Tensorflow from allocating all the memory on the GPUs and make the GPUs unusable for other users. You can check the memory allocation on the GPUs using the command `nvidia-smi` on the terminal as a cross check.
 
 ```python
+import tensorflow as tf
 config = tf.ConfigProto()
 config.gpu_options.allow_growth=True
 sess = tf.Session(config=config)
 ```
 
-**Launching a Jupyter-Hub Server** (The method will be updated in the future in favor of something more robust)   
+**Launching a Jupyter-Hub Server** (The method will be updated in future in favor of something more robust)   
 
 If the Jupyter-Hub server is not running you can start an instance yourself by logging in to dara via ssh. First type `screen` on the terminal which should open a dummy terminal which can be run on the background. Move to the directory `/opt/jupyterHub` and then type `jupyterhub` this should start a Jupyter-Hub server if not already running. You can press `ctrl + a` and then `ctrl + d` to get out of the screened terminal and close your terminal to let the process run in the background.
 
