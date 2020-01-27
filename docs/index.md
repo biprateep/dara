@@ -32,6 +32,9 @@ or
 pip install --user <package-name>
 ```
 The conda based installation should be favoured.
+
+**Note about `conda` environments:** The base conda environment contains packages set up in a way to run most of our codes without much hassle. It may not have updated packages. Use the conda environment named `tf2` if you are in search of the latest and greatest versions of all packages.
+
 ### Storage Space
 Dara has a 512GB SSD and a 2TB hard rive which has been divided as follows:
 - 60 GB for root (`/`) on the SSD, this is where the OS and all common software installations are installed.
