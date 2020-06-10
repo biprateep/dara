@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Software and Python package installation
+title: Softwares and Python packages
 nav_order: 3
 ---
 
