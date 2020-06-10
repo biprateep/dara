@@ -17,3 +17,7 @@ or
 pip install --user <package-name>
 ```
 The conda based installation should be favoured.
+
+# Recipe for conda virtual environments
+- To make the environments available to everyone login as root: `sudo bash`
+- 
