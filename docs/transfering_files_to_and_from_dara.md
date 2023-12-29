@@ -12,3 +12,9 @@ rsync -a ~/Desktop/research/codes/something.pi ask126@dara.phyast.pitt.edu:/home
 ```
 This will first ssh to dara so it asks for a password. "ask126" is my username so replace it with yours.
 The "-a" is to activate archine mode.
+
+To copy all the files in the directory "something" to your home directory on dara, you can do something like (note the forward slashes /, they matter)
+
+```bash
+rsync -a ~/Desktop/research/codes/something/ ask126@dara.phyast.pitt.edu:/home/ask126/
+```
