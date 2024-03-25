@@ -4,7 +4,7 @@ title: Home
 nav_order: 1
 ---
 
-Welcome to the Wiki for Dara!  
+Welcome to the Wiki for Dara (**D**eep learning for **A**stronomy **R**esearch **A**pparatus)!  
 Here I will try to list down all usage notes for working on Dara. Some of the notes might be useful for you but mostly these notes are aimed for me. Incase something is not working feel free to drop me a mail or text on slack. 
 
 # Accessing Dara
