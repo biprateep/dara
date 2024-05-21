@@ -35,6 +35,9 @@ unset __conda_setup
 # <<< conda initialize <<<
 ```
 
-# Paths for Astro softwares
-
 # Paths for GPU drivers
+Adding the following to your `.bashrc` and `.bash_profile` files might be necessary to provide necessary cuda paths
+```bash
+#NVIDIA EXPTS
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/extras/CUPTI/lib64/
+```
